@@ -4,6 +4,7 @@
  */
 
 import { Field } from '@flowgram.ai/free-layout-editor';
+import { Input } from '@app/components/ui/input';
 
 export const FormRender = () => (
   <>
@@ -15,24 +16,24 @@ export const FormRender = () => (
     <div className="content flex flex-col gap-3">
       <Field<string> name="input">
         {({ field }) => (
-          <div className="inline-flex justify-between w-full">
+          <div className="flex justify-between items-center w-full">
             <h2 className="text-lg">Input</h2>
-            <input
-              className="border border-gray-400 rounded"
+            <Input
               value={field.value}
               onChange={field.onChange}
+              className="max-w-[200px]"
             />
           </div>
         )}
       </Field>
       <Field<string> name="output">
         {({ field }) => (
-          <div className="inline-flex justify-between w-full">
+          <div className="flex justify-between items-center w-full">
             <h2 className="text-lg">Output</h2>
-            <input
-              className="border border-gray-400 rounded"
+            <Input
               value={field.value}
               onChange={field.onChange}
+              className="max-w-[200px]"
             />
           </div>
         )}

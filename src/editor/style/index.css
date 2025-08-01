@@ -6,3 +6,26 @@
 @import 'tailwindcss';
 @import './theme.css';
 @import './var.css';
+
+/* 编辑器容器样式 */
+.doc-free-feature-overview {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.demo-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.demo-editor {
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+}
