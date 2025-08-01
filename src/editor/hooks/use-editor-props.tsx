@@ -7,12 +7,14 @@ import { useMemo } from 'react';
 
 import { createMinimapPlugin } from '@flowgram.ai/minimap-plugin';
 import { createFreeSnapPlugin } from '@flowgram.ai/free-snap-plugin';
+import { createFreeNodePanelPlugin } from '@flowgram.ai/free-node-panel-plugin';
 import { FreeLayoutProps } from '@flowgram.ai/free-layout-editor';
 
 import { FormRender } from '@editor/components/form-render';
 import { nodeRegistries } from '../data/node-registries';
 import { initialData } from '../data/initial-data';
 import { NodeRender } from '../components/node-render';
+import { NodePanel } from '../components/node-panel';
 
 export const useEditorProps = () =>
   useMemo<FreeLayoutProps>(
@@ -135,6 +137,13 @@ export const useEditorProps = () =>
           edgeLineWidth: 1,
           alignLineWidth: 1,
           alignCrossWidth: 8,
+        }),
+        /**
+         * NodeAddPanel render plugin
+         * 节点添加面板渲染插件
+         */
+        createFreeNodePanelPlugin({
+          renderer: NodePanel,
         }),
       ],
     }),

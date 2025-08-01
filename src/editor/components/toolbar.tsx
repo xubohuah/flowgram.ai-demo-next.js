@@ -23,6 +23,7 @@ import { useRefresh, useClientContext, usePlaygroundTools, useService, WorkflowD
 import { Button } from '@app/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@app/components/ui/tooltip';
 import { Separator } from '@app/components/ui/separator';
+import { AddNode } from './add-node';
 
 // 工具按钮组件
 const ToolButton = ({ 
@@ -157,11 +158,7 @@ export const Toolbar = () => {
         <Separator orientation="vertical" className="h-4 mx-1" />
         
         {/* 节点操作 */}
-        <ToolButton 
-          icon={Plus} 
-          tooltip="Add Node" 
-          disabled={playground.config.readonly}
-        />
+        <AddNode disabled={playground.config.readonly} />
         
         <Separator orientation="vertical" className="h-4 mx-1" />
         
