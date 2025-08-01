@@ -2,7 +2,11 @@
   "extends": "@flowgram.ai/ts-config/tsconfig.flow.path.json",
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,16 +20,30 @@
     "incremental": true,
     "plugins": [
       {
-          "name": "next"
+        "name": "next"
       }
     ],
     "baseUrl": "src",
     "paths": {
-      "@app/*": ["./*"],
-      "@editor/*": ["editor/*"],
-      "@runtime/*": ["runtime/*"]
+      "@app/*": [
+        "./*"
+      ],
+      "@editor/*": [
+        "editor/*"
+      ],
+      "@runtime/*": [
+        "runtime/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/type.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
